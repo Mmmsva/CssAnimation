@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(0, 0, 0);
+  }
+  .loader {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0555);
+  }
+  .loader:hover {
+    background: rgb(250, 246, 246);
+    box-shadow: 0 0 5px rgb(255, 0, 0) 0 0 25px rgb(255, 4, 4) 0 0 50px rgb(255, 0, 0) 0 0 200px
+      rgb(255, 0, 0);
+  }
+  .loader span {
+    position: absolute;
+    display: block;
+  }
+  .loader span:nth-child(1) {
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(90deg, tranparent, #03e9f4);
+    animation: animate1 1s linear infinite;
+    animation-delay: 0s;
+  }
+  @keyframes animate1  
+  {
+      0%
+      {
+          left:-100%;
+      }
+      100%{
+          left: -100%;
+      }
+  }
+  
+  .loader span:nth-child(3) {
+      bottom: 0;
+      left: 100%;
+      width: 100%;
+      height: 40px;
+      background: linear-gradient(90deg, tranparent, #03e9f4);
+      animation: animate3 1s linear infinite;
+      animation-delay: 0s;
+    }
+    @keyframes animate3
+    {
+        0%
+        {
+            left:100%;
+        }
+        100%{
+            left: -100%;
+        }
+    }
+  
